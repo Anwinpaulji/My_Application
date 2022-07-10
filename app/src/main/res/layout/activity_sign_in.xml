@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SignInActivity"
+    tools:ignore="ExtraText">
+
+    <ImageView
+        android:id="@+id/mainlogoIV"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/main_logo"
+        tools:ignore="ContentDescription" />
+    <TextView
+        android:id="@+id/sigipHeadderTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signip"
+        android:textColor="@color/main_color"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mainlogoIV"
+        android:textSize="@dimen/_24sdp"
+        android:textStyle="bold"/>
+
+    # email Id
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailIdOrUserNameETLY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_below="@id/sigipHeadderTV"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailIdOrUserNameETLYET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:hint="@string/emailId"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart ="@drawable/et_main_id" />
+    </com.google.android.material.textfield.TextInputLayout>
+    # Password
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordETLY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_below="@id/emailIdOrUserNameETLY"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:lines="1"
+            android:singleLine="true"
+            android:hint="@string/password"
+            android:drawablePadding="@dimen/_10sdp"
+            android:drawableStart ="@drawable/et_passowrd" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/submitBT"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+       android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:background="@drawable/bt_background"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
