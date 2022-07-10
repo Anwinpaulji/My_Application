@@ -16,7 +16,7 @@ class SignInActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.submitBT.setOnClickListener(){
-            intent = Intent(this,SignUpActivity::class.java)
+            intent = Intent(this,HomeActivity::class.java)
             startActivity(intent)
         }
     }
