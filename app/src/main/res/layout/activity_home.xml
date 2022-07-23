@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui_activity.HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolBarRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:background="@color/main_color">
+
+        <RelativeLayout
+            android:id="@+id/backBT"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bt_back"
+                android:contentDescription="@string/testing"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menuBT"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/bt_menu"
+                android:contentDescription="@string/testing"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_below="@+id/toolBarRL"
+        android:background="@color/main_dark" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager2VP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottonLayoutRL"
+        android:layout_below="@id/tabLayout" />
+
+    <RelativeLayout
+        android:id="@+id/bottonLayoutRL"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_dark" />
+
+</RelativeLayout>

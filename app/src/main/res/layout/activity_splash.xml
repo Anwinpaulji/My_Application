@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SplashActivity">
+    tools:context=".ui_activity.SplashActivity">
 
     <ImageView
+        android:id="@+id/mainlogoIV"
         android:layout_width="@dimen/_130sdp"
         android:layout_height="@dimen/_130sdp"
         android:src="@drawable/main_logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/_90sdp"
         tools:ignore="ContentDescription" />
+
 
 </RelativeLayout>
