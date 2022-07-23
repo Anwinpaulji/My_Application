@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.SignInActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui_activity.SignInActivity"
     tools:ignore="ExtraText">
 
     <ImageView
@@ -63,17 +64,44 @@
             android:maxLines="1"
             android:lines="1"
             android:singleLine="true"
+            android:inputType="textPassword"
             android:hint="@string/password"
             android:drawablePadding="@dimen/_10sdp"
             android:drawableStart ="@drawable/et_passowrd" />
     </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordETLY"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp">
+
+        <AutoCompleteTextView
+            android:id="@+id/stateListSP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="@string/country" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:layout_above="@id/submitBT"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lotte_animation_1" />
     <Button
         android:id="@+id/submitBT"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="wrap_content"
        android:layout_marginBottom="@dimen/_20sdp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_40sdp"
         android:background="@drawable/bt_background"
         android:text="@string/submit"
         android:textColor="@color/white"
